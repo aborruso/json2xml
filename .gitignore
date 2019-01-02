@@ -2,3 +2,4 @@ json2xml.spec
 build/*
 __pycache__/*
 dist/build/*
+output.xml
