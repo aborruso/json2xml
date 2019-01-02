@@ -6,7 +6,7 @@ import re
 try:   
    sys.argv[1]
 except IndexError:  
-   print("You must add the name the json input file")
+   print("You must add the name of the json input file")
    sys.exit()
 
 jsonFile = sys.argv[1]
@@ -20,15 +20,15 @@ data['item'] = json.loads(jsonString)
 root = {}
 root['root'] = data
 
+'''
 print('JSON input:')
 print(jsonString)
+'''
 
 # remove spaces from keys name 
 xmlString = xmltodict.unparse(json.loads((re.sub(r'\s(?=\w+":)',"_",str(json.dumps(root))))), full_document=False,pretty=True)
  
-print('\nXML output(output.xml):')
-print(xmlString)
- 
 with open('output.xml', 'w') as f:
     f.write(xmlString)
+    print('\nXML output(output.xml) created')
 f.close()
