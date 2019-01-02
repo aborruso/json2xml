@@ -1,6 +1,6 @@
 # JSON2XML
 
-A commandline tool, written python and based on xmltodict, to convert a JSON source to XML output
+A commandline tool, written in python and based on xmltodict, to convert a JSON source to XML output
 
 Run it in this way
 
