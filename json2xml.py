@@ -30,5 +30,5 @@ xmlString = xmltodict.unparse(json.loads((re.sub(r'\s(?=\w+":)',"_",str(json.dum
  
 with open('output.xml', 'w') as f:
     f.write(xmlString)
-    print('\nXML output(output.xml) created')
+    print('XML output (output.xml) created')
 f.close()
